@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings" >
+
+    <CheckBoxPreference
+                android:key="parent_need_pw_preference"
+                android:title="@string/set_password"
+                />
+    
+    <ListPreference
+        android:defaultValue="0"
+        android:dependency="parent_need_pw_preference"
+        android:dialogTitle="@string/mode_select"
+        android:entries="@array/entries_list_preference"
+        android:entryValues="@array/entryvalues_list_preference"
+        android:key="list_preference"
+        android:title="@string/login_mode" />
+    
+    <EditTextPreference 
+        android:key="edit_mail_preference"
+        android:title="@string/mail_backup"
+        android:summary="@string/mail_not_setting"
+        android:dialogTitle="@string/mail_setting"
+        />
+    
+    <PreferenceScreen
+        android:key="backup_screen"
+        android:title="@string/key_backup"
+        android:summary="@string/backup_tip"
+         >
+    </PreferenceScreen>
+        
+     <PreferenceScreen
+        android:key="restore_screen"
+        android:title="@string/key_restore"
+         >
+    </PreferenceScreen>
+     
+     <PreferenceScreen
+        android:key="group_screen"
+        android:title="@string/group_manager"
+         >
+    </PreferenceScreen>
+     
+    <PreferenceScreen
+        android:summary=""
+        android:key="about_screen"
+        android:title="@string/about" >
+        <intent
+            android:action="com.yuri.mykey.about"
+            android:targetClass="com.yuri.mykey.setting.AboutActivity"
+            android:targetPackage="com.yuri.mykey" />
+    </PreferenceScreen>
+
+</PreferenceScreen>

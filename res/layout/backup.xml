@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+	
+	<RelativeLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_margin="15dp"
+	    >
+	    
+	    <EditText 
+	    android:id="@+id/backup_name"
+	    style="@style/edit_text"
+	    android:inputType="text"
+	    android:layout_alignParentLeft="true"
+	    android:layout_centerVertical="true"
+	    android:layout_toLeftOf="@+id/tv_zip_ex"
+	    />
+	    
+	    <TextView 
+	        android:id="@+id/tv_zip_ex"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	    	android:layout_centerVertical="true"
+	        android:text=".zip"
+	        android:textSize="16sp"
+	        />
+	</RelativeLayout>
+	
+	 <CheckBox 
+	        android:id="@+id/cb_backup"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="15dp"
+	        android:layout_marginRight="15dp"
+	        android:layout_marginBottom="15dp"
+	        android:text="备份完成后发送到邮箱"
+	        />
+	
+	<Button 
+	    android:id="@+id/backup_button"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:text="@string/menu_backup"
+	    android:background="@drawable/btn_selector"
+	    />
+</LinearLayout>

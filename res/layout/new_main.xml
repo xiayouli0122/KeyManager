@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:orientation="vertical" >
+        
+         <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tv_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:text="@string/group" />
+
+            <View
+                android:id="@+id/divide_group"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/tv_group"
+                android:background="@android:color/darker_gray" />
+
+            <RelativeLayout
+                android:id="@+id/rl_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/divide_group"
+                android:layout_marginTop="10dp" 
+                android:clickable="true"
+                android:background="@drawable/blue_bg"
+                >
+				
+                <LinearLayout 
+                    android:id="@+id/ll_ggg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:id="@+id/tv_group_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/group_name" />
+                    
+                    <View 
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray"
+                        />
+                </LinearLayout>
+                
+                <ImageView
+                    android:id="@+id/image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:src="@drawable/account_spinner_icon" 
+                        />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+             >
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:text="@string/title" />
+
+            <View
+                android:id="@+id/divide_title"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/tv_title"
+                android:background="@android:color/darker_gray" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/divide_title"
+                android:layout_marginTop="10dp" >
+
+                <EditText
+                    android:id="@+id/et_title"
+                    style="@style/edit_text"
+                    android:layout_toLeftOf="@+id/ll_icon"
+                    android:layout_alignParentBottom="true"
+                    android:hint="@string/title_input" />
+
+                <LinearLayout
+                    android:id="@+id/ll_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_alignParentRight="true"
+                    android:orientation="horizontal" 
+                    android:background="@drawable/blue_bg"
+                    android:clickable="true"
+                    android:visibility="gone"
+                    >
+
+                    <ImageView
+                        android:id="@+id/iv_icon"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_action_icon01" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|right"
+                        android:src="@drawable/account_spinner_icon" />
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:id="@+id/rl_username"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+             >
+
+            <TextView
+                android:id="@+id/tv_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:text="@string/username" />
+
+            <View
+                android:id="@+id/divide_username"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/tv_username"
+                android:background="@android:color/darker_gray" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/divide_username"
+                android:layout_marginTop="10dp" >
+
+                <EditText
+                    android:id="@+id/et_username"
+                    style="@style/edit_text"
+                    android:layout_alignParentBottom="true"
+                    android:hint="@string/username_input" />
+                
+            </RelativeLayout>
+        </RelativeLayout>
+        
+         <RelativeLayout
+            android:id="@+id/rl_password"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+             >
+
+            <TextView
+                android:id="@+id/tv_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:text="@string/password" />
+
+            <View
+                android:id="@+id/divide_password"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/tv_password"
+                android:background="@android:color/darker_gray" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/divide_password"
+                android:layout_marginTop="10dp" >
+
+                <EditText
+                    android:id="@+id/et_password"
+                    style="@style/edit_text"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toLeftOf="@+id/cb_showpw"
+                    android:inputType="textPassword"
+                    android:hint="@string/password_input" />
+                
+                <CheckBox 
+                    android:id="@+id/cb_showpw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/show_pw"
+                    />
+                
+            </RelativeLayout>
+        </RelativeLayout>
+        
+         <RelativeLayout
+            android:id="@+id/rl_confirm_password"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+             >
+            
+            <TextView
+                android:id="@+id/tv_confirm_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:text="confirm_password" />
+
+            <View
+                android:id="@+id/divide_confirm_password"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/tv_confirm_password"
+                android:background="@android:color/darker_gray" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/divide_confirm_password"
+                android:layout_marginTop="10dp" >
+
+                <EditText
+                    android:id="@+id/et_confirm_password"
+                    style="@style/edit_text"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toLeftOf="@+id/btn_showpw"
+                    android:inputType="textPassword"
+                    android:hint="confirm_password" />
+                
+                <Button 
+                    android:id="@+id/btn_showpw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="Show"
+                    android:visibility="gone"
+                    />
+                
+            </RelativeLayout>
+        </RelativeLayout>
+        
+         <RelativeLayout
+            android:id="@+id/rl_power_password"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+             >
+            
+            <TextView
+                android:id="@+id/tv_power_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:text="@string/password_power" />
+
+            <View
+                android:id="@+id/divide_power_password"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/tv_power_password"
+                android:background="@android:color/darker_gray" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/divide_power_password"
+                android:layout_marginTop="10dp" >
+
+                <RadioButton 
+                    android:id="@+id/rb_wake"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:clickable="false"
+                    android:text="@string/wake"
+                    />
+                
+                <RadioButton 
+                    android:id="@+id/rb_middle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:clickable="false"
+                    android:text="@string/middle"
+                    />
+                
+                <RadioButton 
+                    android:id="@+id/rb_power"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:clickable="false"
+                    android:text="@string/power"
+                    />
+                
+            </RelativeLayout>
+        </RelativeLayout>
+        
+      	<RelativeLayout
+            android:id="@+id/rl_website"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+             >
+            
+            <TextView
+                android:id="@+id/tv_website"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:text="@string/website" />
+
+            <View
+                android:id="@+id/divide_website"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/tv_website"
+                android:background="@android:color/darker_gray" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/divide_website"
+                android:layout_marginTop="10dp" >
+                
+                <EditText
+                    android:id="@+id/et_website"
+                    style="@style/edit_text"
+                    android:layout_alignParentBottom="true"
+                     />
+                
+            </RelativeLayout>
+        </RelativeLayout>
+        
+      	<RelativeLayout
+            android:id="@+id/rl_note"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+             >
+            
+            <TextView
+                android:id="@+id/tv_note"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:text="@string/note" />
+
+            <View
+                android:id="@+id/divide_note"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/tv_note"
+                android:background="@android:color/darker_gray" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/divide_note"
+                android:layout_marginTop="10dp" >
+                
+                <EditText
+                    android:id="@+id/et_note"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16.0sp"
+                    android:textColor="#ff59616b"
+                    android:textColorHint="#ffb0b0b0"
+					android:padding="10dp"                    
+                    android:background="@drawable/edittext_bg"
+                    android:imeOptions=""
+                     />
+                
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>
